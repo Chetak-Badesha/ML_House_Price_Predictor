@@ -57,7 +57,7 @@ python app.py
 ```
 Open `http://127.0.0.1:5000` in your browser.
 
-## Example Request (API)
+## Example Request
 POST `/predict` with JSON:
 ```json
 {
@@ -75,7 +75,7 @@ Response includes `predicted_price`, `price_low`, `price_high`, `monthly_payment
 - Example training output: `R²` and `MAE` are printed after training. Use MAE to gauge average dollar error.
 - Limitations: model trained on provided dataset only; does not use location/neighborhood premium without additional features.
 
-## Project Structure (recommended)
+## Project Structure
 ```
 ML_House_Price_Predictor/
 ├── app.py                      # Flask web server
@@ -100,7 +100,3 @@ ML_House_Price_Predictor/
 - Data cleaning is more important than model choice.
 - Feature selection drastically affects accuracy.
 - Even a simple web UI improves usability and project appeal.
-
-## Author
-Chetak Badesha  
-GitHub: `@Chetak-Badesha`
