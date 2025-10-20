@@ -11,10 +11,10 @@ CORS(app)
 model = None
 try:
     model = joblib.load('house_price_model.pkl')
-    print("✓ Model loaded successfully")
+    print("Model loaded successfully")
 except Exception as e:
-    print(f"⚠ No saved model found: {e}")
-    print("⚠ Will use fallback calculations")
+    print(f" No saved model found: {e}")
+    print("Will use fallback calculations")
 
 @app.route('/')
 def home():
