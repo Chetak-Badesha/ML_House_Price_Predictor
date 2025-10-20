@@ -20,6 +20,8 @@ Financial Assumptions:
     - 5.5% annual interest rate, 25-year amortization
     - 1% annual property tax
     - 32% Gross Debt Service (GDS) ratio
+
+    Inspired by @dataquest tutorial on youtube 
 """
 
 import numpy as np
