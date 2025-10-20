@@ -20,9 +20,6 @@ Financial Assumptions:
     - 5.5% annual interest rate, 25-year amortization
     - 1% annual property tax
     - 32% Gross Debt Service (GDS) ratio
-
-Author: [Your Name]
-Date: 2024
 """
 
 import numpy as np
@@ -54,7 +51,7 @@ def load_data():
     if not os.path.exists(file_path):
         raise FileNotFoundError(f"Data file not found: {file_path}")
 
-    print(f"✓ Loading data from: {file_path}")
+    print(f"Loading data from: {file_path}")
     return pd.read_csv(file_path)
 
 
@@ -143,7 +140,7 @@ def train_model(df):
     print(f"  R²: {r2_score(y_test, y_pred):.3f}  |  MAE: ${mean_absolute_error(y_test, y_pred):,.0f}")
 
     joblib.dump(model, "house_price_model.pkl")
-    print("✓ Model saved -> house_price_model.pkl")
+    print("Model saved -> house_price_model.pkl")
     
     return model, df_clean
 
@@ -285,11 +282,11 @@ def main():
         print(f"\n    Required household income: ${info['required_income']:,.0f}/year")
 
         if info["predicted_price"] < avg_price * 0.7:
-            print("\n  ✓ Below average market price - Good value.")
+            print("\n  Below average market price - Good value.")
         elif info["predicted_price"] < avg_price * 1.3:
-            print("\n  ✓ Near average market price.")
+            print("\n  Near average market price.")
         else:
-            print("\n  ⚠ Above average market price - Premium property.")
+            print("\n  Above average market price - Premium property.")
         print("-" * 40)
 
 
